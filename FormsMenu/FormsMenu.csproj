@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5028F62B-045B-478B-9DDB-2FD828056EFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FormsMenu</RootNamespace>
+    <AssemblyName>FormsMenu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\2022CODEandMySQLdataDLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.79.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\OneDrive\Escritorio\Universidad\2n curs\2n quadri\Info 2\BLO4\System.Data.SQLite_DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AfectedFlights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AfectedFlights.Designer.cs">
+      <DependentUpon>AfectedFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AirlinesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AirlinesForm.Designer.cs">
+      <DependentUpon>AirlinesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutomaticDeconflictingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutomaticDeconflictingForm.Designer.cs">
+      <DependentUpon>AutomaticDeconflictingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AñadirFlightplans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirFlightplans.Designer.cs">
+      <DependentUpon>AñadirFlightplans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteAccount.Designer.cs">
+      <DependentUpon>DeleteAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Distance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distance.Designer.cs">
+      <DependentUpon>Distance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUserForm.Designer.cs">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightInfoForm.Designer.cs">
+      <DependentUpon>FlightInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPasswordForm.Designer.cs">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GroupPictureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GroupPictureForm.Designer.cs">
+      <DependentUpon>GroupPictureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoFlights.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoFlights.Designer.cs">
+      <DependentUpon>InfoFlights.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResetPasswordForm.Designer.cs">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimDisplay.Designer.cs">
+      <DependentUpon>SimDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsMenu.Designer.cs">
+      <DependentUpon>FormsMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimulationSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimulationSettings.Designer.cs">
+      <DependentUpon>SimulationSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial_FunctionalitiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial_FunctionalitiesForm.Designer.cs">
+      <DependentUpon>Tutorial_FunctionalitiesForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AfectedFlights.resx">
+      <DependentUpon>AfectedFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AirlinesForm.resx">
+      <DependentUpon>AirlinesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutomaticDeconflictingForm.resx">
+      <DependentUpon>AutomaticDeconflictingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AñadirFlightplans.resx">
+      <DependentUpon>AñadirFlightplans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAccount.resx">
+      <DependentUpon>DeleteAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Distance.resx">
+      <DependentUpon>Distance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUserForm.resx">
+      <DependentUpon>EditUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightInfoForm.resx">
+      <DependentUpon>FlightInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPasswordForm.resx">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GroupPictureForm.resx">
+      <DependentUpon>GroupPictureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoFlights.resx">
+      <DependentUpon>InfoFlights.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResetPasswordForm.resx">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimDisplay.resx">
+      <DependentUpon>SimDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsMenu.resx">
+      <DependentUpon>FormsMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SimulationSettings.resx">
+      <DependentUpon>SimulationSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial_FunctionalitiesForm.resx">
+      <DependentUpon>Tutorial_FunctionalitiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlightLib\FlightLib.csproj">
+      <Project>{3b53fcd9-7a68-42ef-a9da-b0628f94a07e}</Project>
+      <Name>FlightLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\SimDatabase.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-right_grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto avion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GroupPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Airlines Icons\AIR CANADA.png" />
+    <Content Include="Airlines Icons\AEGN.AT_BIG.png" />
+    <Content Include="Airlines Icons\Aer Lingus.png" />
+    <Content Include="Airlines Icons\Air Algerie.png" />
+    <Content Include="Airlines Icons\Air Arabia.png" />
+    <Content Include="Airlines Icons\Air Baltic.png" />
+    <Content Include="Airlines Icons\Air Cairo.png" />
+    <Content Include="Airlines Icons\Air China.png" />
+    <Content Include="Airlines Icons\Air Europa.png" />
+    <Content Include="Airlines Icons\Air France.png" />
+    <Content Include="Airlines Icons\Air Nostrum.png" />
+    <Content Include="Airlines Icons\Air Serbia.png" />
+    <Content Include="Airlines Icons\Air Transat.png" />
+    <Content Include="Airlines Icons\American Airlines.png" />
+    <Content Include="Airlines Icons\Arkia.png" />
+    <Content Include="Airlines Icons\Asiana Airlines.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

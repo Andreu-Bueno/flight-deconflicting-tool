@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3B53FCD9-7A68-42EF-A9DA-B0628F94A07E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlightLib</RootNamespace>
+    <AssemblyName>FlightLib</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\..\BLO4\System.Data.SQLite_DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IO %28DB%29\FlightPlanLoader.cs" />
+    <Compile Include="Models\FlightsHistoricList.cs" />
+    <Compile Include="IO %28DB%29\FlightDBManager.cs" />
+    <Compile Include="Models\FlightPlan.cs" />
+    <Compile Include="Models\FlightPlanList.cs" />
+    <Compile Include="Models\Segment.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Text File Manager\FlightPlanPdfSaver.cs" />
+    <Compile Include="Text File Manager\TextFileManager.cs" />
+    <Compile Include="Utils\ConflictResolver.cs" />
+    <Compile Include="Utils\DataValidation.cs" />
+    <Compile Include="Text File Manager\FlightPlanSaver.cs" />
+    <Compile Include="Models\Position.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AEGN.AT_BIG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aer Lingus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Algerie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Arabia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Baltic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Cairo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Canada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air China.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Europa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air France.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Nostrum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Serbia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Air Transat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\American Airlines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arkia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asiana Airlines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-05-19 095423.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-05-19 095518.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-05-19 095548.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-05-19 095614.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
